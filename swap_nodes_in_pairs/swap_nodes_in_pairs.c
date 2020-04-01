@@ -5,10 +5,10 @@
  * @val: integer value
  * @next: pointer to next node
  */
-struct ListNode {
-	const char *data;
+typedef struct ListNode {
+	int val;
 	struct ListNode *next;
-};
+} ListNode_t;
 
 /**
  * swapPairs - solution A
@@ -16,9 +16,9 @@ struct ListNode {
  *
  * Return: pointer to the head of the resulting list
  */
-struct ListNode *swapPairs(struct ListNode *head)
+ListNode_t *swapPairs(ListNode_t *head)
 {
-	struct ListNode *next;
+	ListNode_t *next;
 
 	if (!head)
 		return (NULL);
