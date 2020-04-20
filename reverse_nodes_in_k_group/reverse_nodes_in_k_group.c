@@ -34,7 +34,7 @@ ListNode_t **_reverseKGroup(ListNode_t **head, ListNode_t *current, int k)
 		head = _reverseKGroup(head, current->next, k - 1);
 		if (!head)
 			return (NULL);
-		current->next = (*head);
+		current->next = *head;
 	}
 	*head = current;
 	return (&current->next);
